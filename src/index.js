@@ -36,7 +36,7 @@ function rate (winRate, loseRate){
   }
   if (diffinRate < 0){
     const newWinRate = (winRate + (loseRate - winRate + 5)) / 3;
-    return newWinRate;
+    return newWinRate.toFixed(2);
   }
   if (winRate >= loseRate){
     if (diffinRate >= 0 && diffinRate <=2){
