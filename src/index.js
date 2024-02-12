@@ -21,10 +21,9 @@ function rate (winRate, loseRate){
     if (diffinRate >= 0 && diffinRate <=2){
       return (winRate += 2);
     }else if (diffinRate > 2 && diffinRate <20){
-
-    }else (diffinRate >= 20){
+      return (winRate += 1);
+    }else (diffinRate >= 20);
       return (winRate);
     }
   }
-}
 console.log(rate());
