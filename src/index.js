@@ -35,16 +35,16 @@ function rate (winRate, loseRate){
     return (winRate = loseRate)
   }
   if (diffinRate < 0){
-    const newWinRate = (winRate + (loseRate - winRate + 5)) / 3;
+    const newWinRate = (loseRate - winRate + 5) / 3;
     return newWinRate.toFixed(2);
   }
   if (winRate >= loseRate){
-    if (diffinRate >= 0 && diffinRate <=2){
+    if (diffinRate >= 0 && diffinRate <= 2){
       return (winRate += 2);
-    }else if (diffinRate > 2 && diffinRate <20){
+    }else if (diffinRate > 2 && diffinRate < 20){
       return (winRate += 1);
     }else (diffinRate >= 20);
       return (winRate);
     }
   }
-console.log(rate());
+console.log(rate(3, 7));
